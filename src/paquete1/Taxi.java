@@ -1,9 +1,11 @@
-
 package paquete1;
 public class Taxi {
-    float ConsumoBase, ValorPasaje, CupoDisponible, ValorPeaje;
-    public float consumoAdicionalPorPersona(float ConsumoBase){
-        ConsumoBase= (16000/50)*45;
-        
-    } 
+ 
+    public float CalcularConsumo(float ConsumoBase, float CupoDisponible){
+        ConsumoBase = (16000 / 50) * 45;
+        CupoDisponible = 4f;  
+          
+
+
+    }
 }
