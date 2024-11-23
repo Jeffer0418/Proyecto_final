@@ -3,7 +3,7 @@ package paquete1;
 import java.util.Scanner;
 public class Ruta {
  Scanner sc=new Scanner(System.in);
- public void menu(int Seleccion){
+ public void menu(int seleccion){
     String nombre, distanciaIda, distanciaVuelta;
     do{
     System.out.println("---------------------");
@@ -12,8 +12,12 @@ public class Ruta {
     System.out.println("2) Via Santa Elena ");
     System.out.println("3) Via Las Palmas");
     System.out.println("---------------------");
-    Seleccion=sc.nextInt();
-    switch (Seleccion) {    
+    seleccion=sc.nextInt();
+    if (seleccion>3) {
+        System.out.println("Ingrese una opcion valida");
+    }
+    }while (seleccion>3); 
+    switch (seleccion) {    
         case 1:
             
             break;
@@ -21,6 +25,6 @@ public class Ruta {
         default:
             break;
     }
-    }while (Seleccion>3); 
+    
  }
 }
