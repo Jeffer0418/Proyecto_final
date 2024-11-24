@@ -6,7 +6,7 @@ public class Simulacion {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int seleccion = 0, cupoDisponible = 0, kmG, kmT, distancia, distanciaVuelta;
+        int seleccion = 0, cupoDisponible = 0, kmG, kmT, distanciaIda, distanciaVuelta;
         float valorPasaje = 0;
         String nombre="";
         Taxi tx = new Taxi();
@@ -26,16 +26,27 @@ public class Simulacion {
                     kmG = 50;
                     System.out.println("Seleccionaste Taxi");
 
-                    System.out.println("EL valor del pasaje es: " + tx.calcularConsumo(cupoDisponible, valorPasaje));
+                    System.out.println("EL valor del pasaje es: " + valorPasaje);
                     break;
                 case 2:
-               
+               cupoDisponible = 10;
+               valorPasaje = 15000;
+               kmG = 40;
+               System.out.println("Seleccionaste Van");
+                System.out.println(" El consumo es de "+ tx.calcularConsumoBajando(distancia, pasajeros));
+               System.out.println("EL valor del pasaje es: " + valorPasaje);
                 break;
                 case 3:
+                cupoDisponible = 15;
+                    valorPasaje = 12000;
+                    kmG = 30;
+                    System.out.println("Seleccionaste Buseta");
 
+                    System.out.println("EL valor del pasaje es: " + valorPasaje);
                 break;
                 default:
                     System.out.println("Ingrese una opcion valida");
+
                     break;
 
             }

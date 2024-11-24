@@ -1,10 +1,9 @@
 package paquete1;
 public class Taxi {
-    
-    public float calcularConsumo(int cupoDisponible, float ValorPasaje){
-        float totValPasaje=0;
-        Vehiculo vh=new Vehiculo();
-        totValPasaje=vh.calcularValorPasaje(ValorPasaje, cupoDisponible);
-        return totValPasaje;
+    public float calcularConsumoBajando(int distancia, int pasajeros) {
+        float consumoBase = consumoBase * distancia;
+        float consumoAdicional = consumoBase * 0.02f * pasajeros;
+        return consumoBase + consumoAdicional;
     }
-}
+        
+    }
