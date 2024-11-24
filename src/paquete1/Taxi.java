@@ -1,4 +1,5 @@
 package paquete1;
+
 public class Taxi {
     
     public float calcularConsumo(int cupoDisponible, float ValorPasaje){
